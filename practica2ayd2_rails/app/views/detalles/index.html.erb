@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Detalles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>decimal</th>
+      <th>descripcion</th>
+      <th>date</th>
+      <th>datetime</th>
+      <th>timestamp</th>
+      <th>boolean</th>
+      <th>Categoria</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @detalles.each do |detalle| %>
+      <tr>
+        <td><%= detalle.ayd2_detalle_decimal %></td>
+        <td><%= detalle.ayd2_detalle_descripcion %></td>
+        <td><%= detalle.ayd2_detalle_date %></td>
+        <td><%= detalle.ayd2_detalle_datetime %></td>
+        <td><%= detalle.ayd2_detalle_timestamp %></td>
+        <td><%= detalle.ayd2_detalle_boolean %></td>
+        <td><%= link_to 'Regresar a la Categoria', categorium_url(detalle.ayd2_categoria_id ) %></td>
+        <td><%= link_to 'Ver', detalle %></td>
+        <td><%= link_to 'Editar', edit_detalle_path(detalle) %></td>
+        <td><%= link_to 'Destruir', detalle, method: :delete, data: { confirm: 'Esta Seguro' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Detalle', new_detalle_path %>

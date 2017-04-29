@@ -1,0 +1,52 @@
+<%= form_for(detalle) do |f| %>
+  <% if detalle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(detalle.errors.count, "error") %> prohibited this detalle from being saved:</h2>
+
+      <ul>
+      <% detalle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ayd2_detalle_decimal %>
+    <%= f.text_field :ayd2_detalle_decimal %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ayd2_detalle_descripcion %>
+    <%= f.text_field :ayd2_detalle_descripcion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ayd2_detalle_date %>
+    <%= f.date_select :ayd2_detalle_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ayd2_detalle_datetime %>
+    <%= f.datetime_select :ayd2_detalle_datetime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ayd2_detalle_timestamp %>
+    <%= f.text_field :ayd2_detalle_timestamp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ayd2_detalle_boolean %>
+    <%= f.check_box :ayd2_detalle_boolean %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ayd2_categoria_id %>
+    <%= f.text_field :ayd2_categoria_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

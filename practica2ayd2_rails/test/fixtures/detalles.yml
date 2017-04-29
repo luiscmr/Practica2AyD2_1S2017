@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ayd2_detalle_decimal: 1.5
+  ayd2_detalle_descripcion: MyString
+  ayd2_detalle_date: 2017-04-25
+  ayd2_detalle_datetime: 2017-04-25 18:38:20
+  ayd2_detalle_timestamp: 
+  ayd2_detalle_boolean: false
+  categoria: one
+
+two:
+  ayd2_detalle_decimal: 1.5
+  ayd2_detalle_descripcion: MyString
+  ayd2_detalle_date: 2017-04-25
+  ayd2_detalle_datetime: 2017-04-25 18:38:20
+  ayd2_detalle_timestamp: 
+  ayd2_detalle_boolean: false
+  categoria: two
